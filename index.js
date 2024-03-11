@@ -43,7 +43,7 @@ const Personne = ["Massi","Jordan","Mounir"]
 
 const Motsavecvoyelle2 = "anticonstitutionnellement massi jordan mounir";
 
-const AgrandirVoyelles = (chaine) => chaine.replace(/[aeiou]/g, '');
+const AgrandirVoyelles = (chainemaj) => chainemaj.toUpperCase(/[aeiou]/g,'');
 
 const Grandevoyelles = AgrandirVoyelles(Motsavecvoyelle);
-console.log(chaine.toUpperCase(aeiou), Grandevoyelles, "Fin de l'exercice 3");
+console.log("Chaîne grande voyelles :", Grandevoyelles, "Fin de l'exercice 3");
