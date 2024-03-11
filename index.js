@@ -1,6 +1,5 @@
-import { divide } from ".math.js";
+// Exos fonctions 
 
-const a = 45;
-const b = 42;
+const somme_nombres = [1,2,3,4,5,6,7];
 
-console.log(divide(a, b)); 
+console.log(somme_nombres); 
