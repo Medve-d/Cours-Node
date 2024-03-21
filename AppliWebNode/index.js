@@ -9,24 +9,6 @@ app.set("view engine", "ejs");
 
 app.set("views", "views");
 
-const middlware1 = (req, res, next) => {
-  console.log(
-    "Je suis un middleware qui s'execute a chaque requete envoyee au serveur"
-  );
-  req.toto = "toto";
-
-  next();
-};
-const middlware2 = (req, res, next) => {
-  console.log(
-    "Je suis un autre middleware qui s'execute a chaque requete envoyee au serveur"
-  );
-  req.toto = "toto3";
-
-  next();
-};
-
-app.use(middlware1, middlware2);
 
 app.use("/", (req, res, next) => {
   console.log(req.toto);
@@ -34,10 +16,12 @@ app.use("/", (req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home", {});
+  res.render("home.ejs", {});
 });
 
-app.use("/shop", shopRouter);
+app.get("/shop", (req,res) => {
+  res.render("shop.ejs")
+});
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
