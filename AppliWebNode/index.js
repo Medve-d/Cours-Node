@@ -1,6 +1,5 @@
 import express from "express";
 
-
 const app = express();
 
 app.use(express.static("public"));
@@ -9,11 +8,15 @@ app.set("view engine", "ejs")
 
 app.set("views", "views")
 
+app.get("/", (req, res) => {
+  res.render("home.ejs")
+});
+
 app.get("/home", (req, res) => {
   res.render("home.ejs")
 });
 app.get("/shop", (req, res) => {
-  res.render("shop2.ejs")
+  res.render("shop.ejs")
 });
 
 
