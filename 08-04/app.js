@@ -22,4 +22,4 @@ app.use(shopRoutes);
 
 app.use(errorsController.get404);
 
-app.listen(3000);
+app.listen(3001);

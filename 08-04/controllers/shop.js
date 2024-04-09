@@ -10,18 +10,18 @@ module.exports.getIndex = (request, response, next) => {
     path: "/",
     products: Products,
   });
-  // Product
-  //     .fetchAll()
-  //     .then(([rows, fieldData]) => {
-  //         res.render('shop/index', {
-  //             pageTitle: 'Shop',
-  //             path: '/',
-  //             products: rows
-  //         });
-  //     })
-  //     .catch(err => {
-  //         if(err) console.log(err);
-  //     });
+  Products
+       .fetchAll()
+       .then(([rows, fieldData]) => {
+           res.render('shop/index', {
+               pageTitle: 'Shop',
+               path: '/',
+               products: rows
+           });
+       })
+       .catch(err => {
+           if(err) console.log(err);
+       });
 };
 
 module.exports.getProducts = (req, res, next) => {
